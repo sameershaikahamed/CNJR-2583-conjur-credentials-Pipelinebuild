@@ -6,7 +6,9 @@ import org.conjur.jenkins.conjursecrets.ConjurSecretCredentialsImpl;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.jvnet.hudson.test.JenkinsRule;
+import org.mockito.junit.MockitoJUnitRunner;
 
 import com.cloudbees.plugins.credentials.CredentialsProvider;
 import com.cloudbees.plugins.credentials.CredentialsScope;
@@ -16,6 +18,7 @@ import com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl;
 
 import jenkins.model.GlobalConfiguration;
 
+@RunWith(MockitoJUnitRunner.class)
 public class ConjurConfigurationTest {
 
 	@Rule

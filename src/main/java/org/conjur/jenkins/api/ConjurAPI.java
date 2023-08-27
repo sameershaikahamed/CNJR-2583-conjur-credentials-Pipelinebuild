@@ -10,6 +10,15 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+ 
+
+ 
+import org.conjur.jenkins.configuration.ConjurConfiguration;
+import org.conjur.jenkins.configuration.ConjurJITJobProperty;
+import org.conjur.jenkins.configuration.FolderConjurConfiguration;
+import org.conjur.jenkins.configuration.GlobalConjurConfiguration;
+import org.conjur.jenkins.jwtauth.impl.JwtToken;
+
 import com.cloudbees.hudson.plugins.folder.AbstractFolder;
 import com.cloudbees.plugins.credentials.CredentialsMatchers;
 import com.cloudbees.plugins.credentials.CredentialsProvider;
@@ -17,13 +26,6 @@ import com.cloudbees.plugins.credentials.common.UsernamePasswordCredentials;
 import com.cloudbees.plugins.credentials.domains.DomainRequirement;
 
 import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
-
-import org.conjur.jenkins.configuration.ConjurConfiguration;
-import org.conjur.jenkins.configuration.ConjurJITJobProperty;
-import org.conjur.jenkins.configuration.FolderConjurConfiguration;
-import org.conjur.jenkins.configuration.GlobalConjurConfiguration;
-import org.conjur.jenkins.jwtauth.impl.JwtToken;
-
 import hudson.model.AbstractItem;
 import hudson.model.Item;
 import hudson.model.ItemGroup;

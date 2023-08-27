@@ -13,14 +13,13 @@ import org.jenkinsci.plugins.credentialsbinding.MultiBinding.MultiEnvironment;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.powermock.core.classloader.annotations.PrepareForTest;
-import org.powermock.modules.junit4.PowerMockRunner;
+import org.mockito.junit.MockitoJUnitRunner;
 
 import com.cloudbees.plugins.credentials.CredentialsStore;
 
-@RunWith(PowerMockRunner.class)
-
-@PrepareForTest({ ConjurSecretCredentialsBinding.class })
+@RunWith(MockitoJUnitRunner.class)
+/*
+@PrepareForTest({ ConjurSecretCredentialsBinding.class })*/
 public class ConjurSecretCredentialsBindingTest {
 
 	public CredentialsStore store;

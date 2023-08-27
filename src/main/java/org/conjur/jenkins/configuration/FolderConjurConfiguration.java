@@ -1,5 +1,7 @@
 package org.conjur.jenkins.configuration;
 
+ 
+
 import org.kohsuke.stapler.DataBoundConstructor;
 import org.kohsuke.stapler.DataBoundSetter;
 
