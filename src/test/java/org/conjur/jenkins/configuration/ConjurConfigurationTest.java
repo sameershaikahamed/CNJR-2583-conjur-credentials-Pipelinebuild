@@ -29,7 +29,6 @@ public class ConjurConfigurationTest {
 
 		CredentialsStore store = CredentialsProvider.lookupStores(j.jenkins).iterator().next();
 
-	
 		// Setup Conjur login credentials
 		UsernamePasswordCredentialsImpl conjurCredentials = new UsernamePasswordCredentialsImpl(CredentialsScope.GLOBAL,
 				"conjur-login", "Login Credential to Conjur", "host/frontend/frontend-01",

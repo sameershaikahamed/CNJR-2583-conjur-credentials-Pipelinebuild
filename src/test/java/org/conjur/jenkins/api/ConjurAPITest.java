@@ -1,11 +1,9 @@
 
 package org.conjur.jenkins.api;
 
-import static org.junit.Assert.assertTrue;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.mockStatic;
-import static org.mockito.Mockito.when;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -13,32 +11,19 @@ import java.util.List;
 
 import org.conjur.jenkins.api.ConjurAPI.ConjurAuthnInfo;
 import org.conjur.jenkins.configuration.ConjurConfiguration;
-import org.conjur.jenkins.conjursecrets.ConjurSecretCredentiTest;
 import org.conjur.jenkins.jwtauth.impl.JwtToken;
-import org.junit.After;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.runner.RunWith;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import org.mockito.Mock;
-import org.mockito.MockedStatic;
-import org.mockito.Mockito;
-import org.mockito.MockitoAnnotations;
+import org.mockito.*;
+
 
 import org.mockito.junit.MockitoJUnitRunner;
 
 import com.cloudbees.plugins.credentials.common.UsernamePasswordCredentials;
 
-import hidden.jth.org.apache.http.client.HttpRequestRetryHandler;
-import hidden.jth.org.apache.http.impl.client.CloseableHttpClient;
-import hidden.jth.org.apache.http.impl.client.DefaultHttpRequestRetryHandler;
-import hidden.jth.org.apache.http.impl.client.HttpClients;
-import hidden.jth.org.apache.http.protocol.HttpContext;
 import hudson.model.ModelObject;
-import jenkins.model.Jenkins;
 import okhttp3.Call;
 import okhttp3.OkHttpClient;
 
@@ -52,8 +37,6 @@ public class ConjurAPITest {
 	public Call remoteCall;
 	public ConjurAPI api;
 	public List<UsernamePasswordCredentials> availableCredential;
-
-	private AutoCloseable closeable;
 
 
 	@Before

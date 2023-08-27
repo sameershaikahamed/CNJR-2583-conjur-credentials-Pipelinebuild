@@ -18,8 +18,6 @@ import org.mockito.junit.MockitoJUnitRunner;
 import com.cloudbees.plugins.credentials.CredentialsStore;
 
 @RunWith(MockitoJUnitRunner.class)
-/*
-@PrepareForTest({ ConjurSecretCredentialsBinding.class })*/
 public class ConjurSecretCredentialsBindingTest {
 
 	public CredentialsStore store;
